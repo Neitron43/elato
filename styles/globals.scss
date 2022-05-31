@@ -1,0 +1,274 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import './Header.scss';
+@import './Slider.scss';
+@import './Footer.scss';
+@import './about.scss';
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+@font-face {
+  font-family: 'PT Astra Sans';
+  src: url('../public/fonts/ptsans.woff') format('woff'), /* Modern Browsers */
+       url('../public/fonts/ptsans.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #3B3B3A;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 39px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 29px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+p {
+  font-family: 'PT Astra Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #3B3B3A;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  border-radius: 8px;
+  &.gradient {
+    font-family: 'PT Astra Sans';
+    background: linear-gradient(90deg, #FC821E 0%, #FCB757 100%);
+    padding: 20px 35px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+  }
+  &.white {
+    background: #FFFFFF;
+    border: 1px solid #F5A844;
+    border-radius: 8px;
+    padding: 20px 35px;
+    & p {
+      font-family: 'PT Astra Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: #F5A844;
+      &::after {
+        content: '';
+        background-image: url('../public/image/button-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-left: 14px;
+        padding: 7px 8px;
+      }
+    }
+  }
+}
+
+.wrapper {
+  max-width: 1110px;
+  position: relative;
+  margin: 0 auto;
+  @media (max-width: 1024px) {
+    margin: 0 40px;
+  }
+  @media (max-width: 640px) {
+    margin: 0 20px; 
+  }
+}
+.info {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  & h2 {
+    margin-bottom: 32px;
+    max-width: 750px;
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+  &__image {
+    top: 0;
+    right: 0;
+    position: absolute;
+    @media (max-width: 1024px) {
+      position: relative;
+      align-self: center;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__ph {
+    max-width: 569px;
+    margin-bottom: 28px;
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+    &--strong {
+      color: #8C9919;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+}
+.more {
+  margin-top: 50px;
+  background: #E0E0E0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 640px) {
+    flex-direction: column-reverse;
+  }
+  &__image {
+    @media (max-width: 640px) {
+      align-self: flex-start;
+    }
+  }
+  &__info {
+    margin-left: 10%;
+    max-width: 495px;
+    @media (max-width: 1024px) {
+      margin-left: 0;
+      max-width: 387px;
+    }
+    @media (max-width: 640px) {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    & h2 {
+      margin-bottom: 28px;
+    }
+  }
+}
+.news {
+  margin-top: 100px;
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & h2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .news__list.language__form {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    @media (max-width: 1024px) {
+      gap: 20px;
+    }
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
+    & .news-list__item {
+      background-color: transparent;
+      width: 255px;
+      border-top: 4px solid  #F5A844;
+      border-left: 4px solid  #F5A844;
+      border-right: 4px solid  #F5A844;
+      border-bottom: 20px solid  #F5A844;
+      border-bottom-left-radius: 27px !important;
+      border-bottom-right-radius: 27px !important;
+      border-radius: 17px;
+      @media (max-width: 1024px) {
+        width: 315px;
+        &:nth-child(3), &:nth-child(4) {
+          display: none;
+        } 
+      }
+      @media (max-width: 640px) {
+        width: 100%;
+      }
+      // & .news-list__container-image {
+      //   width: 100%;
+      // }
+      & .news-list__title {
+        font-family: 'PT Astra Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        color: #3B3B3A;        
+        padding: 5px 13px 0 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; 
+                line-clamp: 3; 
+        -webkit-box-orient: vertical;
+        margin-bottom: 17px;
+        @media (max-width: 1024px) {
+          -webkit-line-clamp: 2; 
+                  line-clamp: 2; 
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+  .news__button {
+    margin-top: 32px;
+    width: fit-content;
+    margin-bottom: 40px;
+  }
+}

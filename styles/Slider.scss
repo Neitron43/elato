@@ -1,0 +1,23 @@
+.slider__main.swiper {
+    padding-bottom: 30px;  
+    & > .swiper-horizontal > .swiper-pagination-bullets,
+    & > .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: 0;
+    }
+  
+    & > .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    & > .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      opacity: 1;
+      background-color: gray;
+      border-radius: 8px;
+      transition: width 0.2s linear, background-color 0.2s linear;
+  
+      &-active {
+        width: 22px;
+        background-color: #F5A844;
+      }
+    }
+  }
+  

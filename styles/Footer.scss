@@ -1,0 +1,84 @@
+footer {
+    background: #6B6B6B;
+    padding: 52px 0 34px 0;
+    & .footer-top {
+        display: flex;
+        gap: 100px;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+        & .footer__logo {
+            margin-top: 20px;
+        }
+        & .footer__nav {
+            display: flex;
+            gap: 80px;
+            @media (max-width: 1024px) {
+                gap: 48px;
+            }
+            @media (max-width: 640px) {
+                flex-direction: column;
+                gap: 0;
+              }
+            & .nav__column {
+                display: flex;
+                flex-direction: column;
+                & a {
+                    font-family: 'PT Astra Sans';
+                    font-style: normal;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #FFFFFF;
+                }
+                & .nav__header {
+                    font-weight: 700;
+                    margin-bottom: 24px;
+                    font-family: 'Montserrat';
+                }
+                & .nav__phone {
+                    margin-bottom: 12px;
+                }
+                & li {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+    & hr {
+        width: 100%;
+        height: 1px;
+        margin: 24px 0;
+        background-color: #FFFFFF;
+    }
+    & .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 640px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+          }
+        & a {
+            font-family: 'PT Astra Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #FFFFFF;
+        }
+        & .footer__made {
+            justify-self: center;
+            &::after {
+                content: '';
+                background-image: url('../public/image/palax-logo.svg');
+                padding: 6px 30px;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-left: 9px;
+            }
+        }
+        & .footer__yt {
+            margin-left: 13px;
+        }
+    }
+}
